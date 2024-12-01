@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado El Ahorro</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="#">Supermercado El Ahorro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#promociones">Promociones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="py-5 text-center bg-light">
+        <div class="container">
+            <h1 id="saludo" class="mb-4">ESTAMOS LISTOS PARA BRINDARTE LO MEJOR</h1>
+            <p class="lead">Encuentra todo lo que necesitas al mejor precio, calidad garantizada en cada producto.</p>
+            <img src="img/GUALAN.jpeg" alt="Supermercado" class="img-fluid rounded">
+        </div>
+    </section>
+
+    <!-- Sección de Promociones -->
+    <section id="promociones" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Promociones del Mes</h2>
+            <button class="btn btn-success mb-3" onclick="togglePromociones()">Mostrar/Ocultar Promociones</button>
+            <ul id="lista-promociones" class="list-group d-none">
+                <li class="list-group-item">3x2 en cereales</li>
+                <li class="list-group-item">15% de descuento en productos lácteos</li>
+                <li class="list-group-item">Ofertas en carnes cada fin de semana</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+            <form onsubmit="return validarFormulario()" class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Tu correo">
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" class="form-control" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="py-3 bg-dark text-light text-center">
+        <p>&copy; 2024 Supermercado El Ahorro. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS y Script personalizado -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
